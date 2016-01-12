@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/fail_fragment"/>
+    
+    <TextView 
+        android:id="@+id/tv_fail_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/little_title_font"
+        android:layout_marginTop="@dimen/common_margin_and_padding"/>
+    
+    <!-- 重新探测按钮 -->
+    <TextView 
+        android:id="@+id/tv_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_item_btn"
+        android:text="@string/capture_again"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font"
+        android:drawableLeft="@drawable/ic_reload"
+        android:padding="@dimen/common_margin_and_padding5"
+        android:drawablePadding="@dimen/common_margin_and_padding3"
+        android:layout_marginTop="@dimen/common_margin_and_padding4"
+        android:layout_marginBottom="@dimen/common_margin_and_padding4"
+        />
+
+</LinearLayout>

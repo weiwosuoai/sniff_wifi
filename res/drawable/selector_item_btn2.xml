@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 获取焦点 -->
+    <item android:state_focused="true">
+        <shape>
+             <!-- 按钮获取焦点的颜色 -->
+             <solid android:color="@color/btn_selected" /> 
+        </shape>
+    </item>
+    
+    <!-- 按钮被点击 -->
+    <item android:state_pressed="true">
+        <shape>
+             <!-- 按钮点击下去的颜色 -->
+             <solid  android:color="@color/btn_selected" /> 
+        </shape>
+    </item>
+    
+    <!-- 正常状态下的按钮 -->
+    <item>
+        <shape>
+            <!-- 正常状态下的填充颜色 -->
+            <solid  android:color="@color/main_color" />
+        </shape>
+    </item>
+
+</selector>

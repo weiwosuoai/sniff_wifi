@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    	<!-- 雷达 -->
+        <com.paibo.sniff.view.RippleBackground
+		    xmlns:custom="http://schemas.android.com/apk/res-auto"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:paddingTop="1dp"
+		    android:id="@+id/content"
+		    custom:rb_color="@color/ripple_color"
+		    custom:rb_radius="32dp"
+		    custom:rb_rippleAmount="3"
+		    custom:rb_duration="4000"
+		    custom:rb_scale="6">
+		    
+			<!-- 雷达中间的图片 -->
+            <RelativeLayout 
+                android:id="@+id/rl_tmp"
+                android:layout_width="64dp"
+		        android:layout_height="64dp"
+		        android:layout_centerInParent="true">
+                
+				<!--参照点（圆心） -->
+                <View 
+                    android:id="@+id/center"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"/>
+                
+                <ImageView
+			        android:layout_width="64dp"
+			        android:layout_height="64dp"
+			        android:id="@+id/centerImage"
+			        android:src="@drawable/radar_center"/>
+                
+                <ImageView
+                    android:id="@+id/iv_centerImage2" 
+                    android:layout_width="30dp"
+		        	android:layout_height="30dp"
+		        	android:src="@drawable/radar_center2"
+		        	android:layout_toLeftOf="@id/center"
+		        	android:layout_centerVertical="true"/>
+            </RelativeLayout>
+		    
+		    <!-- 被搜索的wifi -->
+		    <ImageView
+		        android:layout_width="54dp"
+		        android:layout_height="54dp"
+		        android:id="@+id/foundDevice"
+		        android:layout_above="@id/rl_tmp"
+		        android:layout_marginBottom="32dp"
+		        android:layout_toLeftOf="@id/rl_tmp"
+		        android:layout_marginRight="6dp"
+		        android:src="@drawable/wifi"
+		        android:visibility="gone"/>
+		    
+		    <!-- 被搜索的手机 -->
+		    <ImageView
+		        android:layout_width="35dp"
+		        android:layout_height="35dp"
+		        android:id="@+id/foundDevice2"
+		        android:layout_below="@id/rl_tmp"
+		        android:layout_marginBottom="32dp"
+		        android:layout_toLeftOf="@id/rl_tmp"
+		        android:layout_marginRight="6dp"
+		        android:src="@drawable/phone"
+		        android:visibility="gone"/>
+		    
+		    <!-- 被搜索的phone -->
+		    <ImageView
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:id="@+id/foundWifi"
+		        android:layout_above="@id/rl_tmp"
+		        android:layout_marginBottom="32dp"
+		        android:layout_toRightOf="@id/rl_tmp"
+		        android:layout_marginRight="6dp"
+		        android:src="@drawable/phone"
+		        android:visibility="gone"/>
+		    
+		    <!-- 被搜索的wifi -->
+		    <ImageView
+		        android:layout_width="35dp"
+		        android:layout_height="35dp"
+		        android:id="@+id/foundWifi2"
+		        android:layout_below="@id/rl_tmp"
+		        android:layout_marginBottom="32dp"
+		        android:layout_toRightOf="@id/rl_tmp"
+		        android:layout_marginRight="6dp"
+		        android:src="@drawable/wifi"
+		        android:visibility="gone"/>
+		</com.paibo.sniff.view.RippleBackground>
+    
+
+</RelativeLayout>

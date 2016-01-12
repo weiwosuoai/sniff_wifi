@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- 水波纹 -->
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">64dp</dimen>
+    
+    <!-- 
+    
+  		######## Google Material Design 常用字号，请严格使用下列字号 ######## 
+    
+    	参考如下：
+    	
+    		文字排版：
+    	
+    		12sp 小字提示
+    		14sp（桌面端13sp） 正文/按钮文字
+    		16sp（桌面端15sp） 小标题
+    		20sp Appbar文字
+    		24sp 大标题
+    		34sp/45sp/56sp/112sp 超大号文字
+    		长篇幅正文，每行建议60字符（英文）左右。短文本，建议每行30字符（英文）左右。
+    
+     -->
+     
+    <dimen name="little_font">12sp</dimen>
+    <dimen name="normal_font">14sp</dimen>
+    <dimen name="little_title_font">16sp</dimen>
+    <dimen name="action_bar_font">20sp</dimen>
+    <dimen name="big_title_font">24sp</dimen>
+    <dimen name="super_big_font1">34sp</dimen>
+    <dimen name="super_big_font2">45sp</dimen>
+    
+    <!-- #################################################################### -->
+    
+    <dimen name="common_margin_and_padding">10dp</dimen>
+    <dimen name="common_margin_and_padding2">14dp</dimen>
+    <dimen name="common_margin_and_padding3">5dp</dimen>
+    <dimen name="common_margin_and_padding4">20dp</dimen>
+    <dimen name="common_margin_and_padding5">8dp</dimen>
+    <dimen name="action_bar_height">50dp</dimen>
+
+
+
+
+
+
+
+
+
+
+
+</resources>

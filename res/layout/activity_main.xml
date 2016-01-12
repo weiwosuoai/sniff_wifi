@@ -1,0 +1,268 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/bg_info_start" >
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/main_color"
+        android:gravity="center_vertical">
+        
+        <!-- navigation -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/action_bar_height"
+            android:gravity="center_vertical"
+            >
+            
+            <!-- 退出按钮 -->
+            <ImageView 
+	            android:id="@+id/iv_quit"    
+	            android:layout_width="@dimen/action_bar_height"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/ic_finish_app"
+	            android:background="@drawable/selector_item_btn2"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"
+	            android:padding="@dimen/common_margin_and_padding2"/>    
+	    
+            
+	        <TextView 
+	            android:id="@+id/title"
+	            android:text="@string/app_name"
+	            android:layout_toRightOf="@id/iv_quit"
+	            style="@style/action_bar_title"/>
+	    
+        	<!-- 设置按钮 -->
+            <ImageView 
+	            android:id="@+id/iv_setting"    
+	            android:layout_width="@dimen/action_bar_height"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/ic_setting"
+	            android:background="@drawable/selector_item_btn2"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:padding="@dimen/common_margin_and_padding2"/>
+        </RelativeLayout>
+        
+        <!-- fragment -->
+        <FrameLayout 
+            android:id="@+id/fragement_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+    </LinearLayout>
+
+    <!-- 开始采集 -->
+    <LinearLayout 
+        android:id="@+id/start_collect_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/bg_info_start"
+        android:gravity="bottom"
+        >
+        
+        <ImageView 
+            android:id="@+id/btn_start_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_btn_start_collect"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            />
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_bottom"
+            android:layout_gravity="bottom"
+            />
+
+    </LinearLayout>
+    
+    <!-- 信息采集区 -->
+    <LinearLayout 
+        android:id="@+id/collect_info_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+        
+		<!--采集结果 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <View 
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:background="@color/main_color"
+                    android:layout_marginLeft="10dp"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/collect_result"
+                    android:textSize="@dimen/little_title_font"
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_location"
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="@dimen/normal_font"/>
+                
+                <TextView
+                    android:id="@+id/tv_address" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在探测..."
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/normal_font"/>
+                
+                <TextView
+                    android:id="@+id/tv_address_des" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(...)"
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/normal_font"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longitude"
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="20dp"
+                     android:textSize="@dimen/normal_font"/>
+                
+                <TextView
+                    android:id="@+id/tv_longitude" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在探测..."
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/normal_font"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latitude"
+                    android:textColor="@color/font_color"
+                    android:textSize="@dimen/normal_font"
+                    android:layout_marginLeft="50dp"/>
+                
+                <TextView 
+                    android:id="@+id/tv_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在探测..."
+                    android:textColor="@color/font_color"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/normal_font"/>
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+        <View 
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="@color/split_line"
+           android:layout_marginTop="15dp"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="5dp"
+           />
+            
+            <LinearLayout
+                android:id="@+id/item_wifi_num" 
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/selector_item"
+                >
+                
+                <ImageView 
+                    android:id="@+id/item_wifi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/info_wifi"
+                    android:layout_marginLeft="10dp"
+                    />
+                
+                <ImageView 
+                    android:id="@+id/loading1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/loading"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wifi_num_title"
+                    android:textColor="@color/font_color"
+                    android:textSize="@dimen/normal_font"
+                    android:layout_marginLeft="5dp"/>
+                
+                <TextView 
+                    android:id="@+id/wifi_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在采集..."
+                    android:textColor="@color/font_color"
+                    android:textSize="@dimen/normal_font"/>
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textColor="@color/font_color"
+                    android:textSize="@dimen/normal_font"/>
+                
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

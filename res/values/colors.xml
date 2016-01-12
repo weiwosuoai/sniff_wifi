@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="item_selected">#F4F5F5</color>
+    
+    <color name="ripple_color">#A7C0F9</color>
+    <color name="main_color">#4575E3</color>
+    
+    <color name="bg_info_start">#E2F4FE</color>
+    <color name="btn_selected">#0F64C8</color>
+    <color name="transparent">#00000000</color>
+    <color name="font_color">#3A3A3A</color>
+    <color name="little_font_color">#717171</color>
+    <color name="split_line">#BBBBBB</color>
+    
+</resources>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 搜索 -->
+    <item 
+        android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:title="@string/search"
+        android:showAsAction="ifRoom"/>
+    
+    <!-- 设置 -->
+    <item
+        android:id="@+id/action_settings"
+        android:showAsAction="never"
+        android:icon="@drawable/more"
+        android:title="@string/action_settings"/>
+
+</menu>

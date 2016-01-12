@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">嗅探App</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="search">搜索</string>
+    
+    <string name="submit">提交</string>
+    <string name="quit">退出</string>
+    <string name="collect_result">采集结果:</string>
+    <string name="current_location">当前位置:</string>
+    <string name="longitude">经度:</string>
+    <string name="latitude">纬度:</string>
+    <string name="wifi_num_title">附近WiFi热点数 (</string>
+    <string name="phone_num_title">附近手机MAC (</string>
+    
+    <string name="wifi_actionbar_title">WiFi热点</string>
+    <string name="mac_actionbar_title">手机MAC</string>
+    
+    <string name="phone_num">手机号 :</string>
+    <string name="mac">MAC :</string>
+    <string name="ssid">SSID :</string>
+    
+    <string name="left_parentheses">(</string>
+    <string name="right_parentheses">)</string>
+    
+    <!-- error tips -->
+    <string name="parse_libcap_fail">捕获失败，解析数据失败！</string>
+    <string name="get_apk_root_permission_fail">捕获失败，申请此应用的ROOT权限失败！</string>
+    <string name="device_no_root">捕获失败，设备未ROOT！</string>
+    <string name="wifi_no_connect">捕获失败，WiFi未连接！</string>
+    
+    <string name="capture_success">采集成功！</string>
+    
+    <string name="capture_again">重新探测</string>
+
+</resources>
