@@ -65,7 +65,7 @@ public class MainActivity extends BaseActivity implements RadarFragmentCallback,
 			
 			case SniffWifiManager.SNIFF_FAIL:
 				String errorMsg = (String) msg.obj;
-				// 显示捕获失败的fregment
+				// 显示捕获失败的fragment
 				showCapturerFailFragment(errorMsg);
 				stopItemLoadingAniamtion();
 				break;

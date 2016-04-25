@@ -1,2 +1,2 @@
-# sniff_wifi
-此app重来探测周围的wifi信息，以及wifi下的连接设备的mac地址
+# wifi_sniff
+This application be used for sniff all the wifi infos around ...
